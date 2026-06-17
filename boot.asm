@@ -24,3 +24,9 @@ MOV ES, AX
 MOV FS, AX
 MOV GS, AX
 MOV SS, AX
+
+; define stack pointer as mbr start address
+
+MOV SP, 0x7C00
+
+JMP $ ; halt
