@@ -13,3 +13,14 @@
 
 ; clear sector registers
 ; sector registers can't be xor'd
+; https://wiki.osdev.org/Real_Mode
+; There are six 16-bit segment registers:
+; CS, DS, ES, FS, GS, and SS. When using segment registers, addresses are given with the following notation
+; (where 'Segment' is a value in a segment register and 'Offset' is a value in an address register): 
+
+XOR AX, AX
+MOV DS, AX
+MOV ES, AX
+MOV FS, AX
+MOV GS, AX
+MOV SS, AX
