@@ -32,5 +32,5 @@ MOV SP, 0x7C00
 JMP $ ; halt
 
 ; write all remaining bytes to zero and last two bytes 0x55 and 0xAA
-times 510 - ($ - $$) db 0 ; $ - current byte, $$ program start byte (0x7C00)
-dw 0xAA55 ; little-endian
+TIMES 510 - ($ - $$) DB 0 ; $ - current byte, $$ program start byte (0x7C00)
+DW 0xAA55 ; little-endian
