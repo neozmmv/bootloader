@@ -7,5 +7,5 @@ bootloader:
 run:
 	qemu-system-i386 -drive format=raw,file=boot.bin
 
-floppy:
+floppy: bootloader
 	qemu-system-i386 -drive file=boot.bin,format=raw,if=floppy
